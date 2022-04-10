@@ -12,7 +12,10 @@ class Object{
         helper.print("E ora si: ");
 
         helper.y = 30;
-
+        System.out.println(helper);
+        System.out.println(helper.toString());
+        
+        
         // possibile utilizzo dello scope:
         // attualmente x = 15 e y = 30
         {
