@@ -30,28 +30,27 @@ public class Ball extends JComponent {
 
     public void paint(Graphics g) {
         g.setColor(Color.white);
-        g.fillOval((int)x, (int)y, (int)diameter, (int)diameter);
+        g.fillOval(Space.metersToPixels(x, 0), Space.metersToPixels(y, 0), diameter, diameter);
     }
 
     public void moveBall(float dx, float dy) {
+        System.out.println("dx: " + dx + ", dy: " + dy);
         this.x += dx;
         this.y += dy;
         this.repaint();
     }
 
     public void update(long time){
-        long timeInSeconds = TimeUnit.MILLISECONDS.toSeconds(this.time);
-        long newTimeInSeconds = TimeUnit.MILLISECONDS.toSeconds(time);
-        float speedY = this.speedY + (this.accelerationY * (newTimeInSeconds - timeInSeconds));
-        float y = this.y + (this.y * speedY)
-                + (accelerationY * (float)(Math.pow(newTimeInSeconds, 2) - Math.pow(timeInSeconds, 2)));
+        System.out.println("Time: " + getTimeInSecond(time));
+        updateSpeed(time);
+        updateY(time);
         
         this.moveBall(0, (y - this.y));
 
         this.speedY = speedY;
         this.y = y;
         this.time = time;
-        System.out.println(this.time);
+        
     }
 
     public void applyGravityForce(){
@@ -61,9 +60,6 @@ public class Ball extends JComponent {
     // Getter & Setter
     public void setX(float x) {
         this.x = x;
-    }
-    public float getXX(){
-        return this.x;
     }
     public void setY(float y) {
         this.y = y;
@@ -76,6 +72,30 @@ public class Ball extends JComponent {
     }
     public int getDiameter(){
         return this.diameter;
+    }
+
+    public void setSpeedY(float speed) {
+        this.speedY = speed;
+    }
+
+    private void updateSpeed(long time){
+        float speed = this.speedY + (this.accelerationY * (getTimeInSecond(time)
+                                                        - getTimeInSecond(this.time)));
+        System.out.println("Speed: " + speed);
+        this.setSpeedY(speed);
+    }
+
+    private void updateY(long time){
+        float y = this.y + (speedY * (getTimeInSecond(time) - getTimeInSecond(this.time)))
+                + (this.accelerationY * (float)(Math.pow(getTimeInSecond(time), 2) - Math.pow(getTimeInSecond(this.time), 2)));
+        System.out.println("Y: " + y);
+        this.setY(y);
+    }
+
+    private float getTimeInSecond(long time){
+        float newTime = time / 1000F;
+        System.out.println("new Time dio cane: " + time / 1000F);
+        return newTime;
     }
     
 }

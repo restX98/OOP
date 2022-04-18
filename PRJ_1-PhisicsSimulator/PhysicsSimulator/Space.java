@@ -8,6 +8,7 @@ public class Space extends JFrame {
     public long spaceTime;
     private final int timeFrame = 100;
 
+    public static final float pixRatio = 3779.527559055F;
     public Space(){
         this.spaceTime = 0;
 
@@ -30,6 +31,7 @@ public class Space extends JFrame {
                 TimeUnit.MILLISECONDS.sleep(this.timeFrame);
                 this.increaseTime(this.timeFrame);
                 ball.update(this.spaceTime);
+                System.out.println("SpaceTime: " + this.spaceTime);
             }            
         }catch(InterruptedException e){
             System.out.println("Error");
@@ -42,4 +44,11 @@ public class Space extends JFrame {
         }
     }
 
+    public static float pixelsToMeters(int pixels, int zoom) {
+        return pixels/pixRatio;
+    }
+
+    public static int metersToPixels(float meters, int zoom) {
+        return Math.round(pixRatio*meters);
+    }
 }
