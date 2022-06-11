@@ -28,7 +28,6 @@ public class LabeledPoint extends Point{
     @Override
     public boolean equals(Object o){
         if(this == o) return true;
-        
         if (!(o instanceof LabeledPoint)) return false;
 
         LabeledPoint p = (LabeledPoint)o;
