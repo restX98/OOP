@@ -45,6 +45,4 @@ public class Examples {
             arr[5] = 10;
         }
     }
-
-
 }
