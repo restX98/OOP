@@ -19,11 +19,22 @@ public class LabeledPoint extends Point{
         super(x, y);
         this.label = label;
     }
-
+    /* Override indica al compilatore che quel metodo deve fare
+     * l'override di quel metodo da una delle super classi.
+     */
     @Override
     public String toString(){
         return this.getClass().getName() + "(" + x + ", " + y + ", " + label + ")";
     }
+    
+    /* Se sbaglio l'intestazione il compilatore mi avverte che non esiste
+     * quel metodo in una delle super classi e che quindi non ne può fare
+     * l'override.
+     */
+    //@Override
+    //public String toString(Object o){
+    //    return this.getClass().getName() + "(" + x + ", " + y + ", " + label + ")";
+    //}
 
     @Override
     public boolean equals(Object o){

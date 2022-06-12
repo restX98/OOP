@@ -17,7 +17,12 @@ public class Inheritance {
 
         ((LabeledPoint)genericPoint).setLabel("Paccio1"); //Però perdo l'accesso ai nuovi metodi definiti
         
-        System.out.println(genericPoint.toString()); // Ma uso quelli Overrided
+        System.out.println(genericPoint.toString()); // Ma uso quelli Overrided.
+        /* Binding Dinamico: le chiamate ai metodi sono determinate a runtime in funzione
+         * della classe dell'istanza su cui è stato chiamato.
+         * Un metodo si dice polimorfo quando è in grado di adattare il suo comportamento
+         * all'oggetto specifivo.
+        */
     }
 
 }
