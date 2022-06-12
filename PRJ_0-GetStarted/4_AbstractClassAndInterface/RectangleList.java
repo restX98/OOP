@@ -12,5 +12,4 @@ public class RectangleList implements MyListInterface{
         // DO STUFF
         return new Object();
     }
-
 }

@@ -17,7 +17,4 @@ public class Rectangle extends Shape {
     public void draw(){
         // DO STUFF
     }
-
-
-
 }
