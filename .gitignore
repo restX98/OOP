@@ -1,3 +1,8 @@
+# Random File Into PRJ_0-GetStarted
+*.dat
+*.bin
+*.txt
+
 # Compiled class file
 *.class
 
