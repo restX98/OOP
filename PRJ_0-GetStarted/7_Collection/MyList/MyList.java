@@ -114,6 +114,5 @@ public class MyList {
 
         array = array.substring(0, array.length()-2).concat(" ]");
         return array;
-        
     }
 }
