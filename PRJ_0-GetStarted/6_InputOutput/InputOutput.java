@@ -24,6 +24,9 @@ public class InputOutput {
         InputOutput.randomAccessFile("text.dat");
         InputOutput.readWriteChar("text2.txt");
 
+        // E' possibile reinterpretare uno StreamReader come un Reader nel caso
+        // in cui trasmetta byte di caratteri tramite InputStreamReader e OutputStreamWriter
+
     }
 
     public static void readWriteByte(String fileName){
