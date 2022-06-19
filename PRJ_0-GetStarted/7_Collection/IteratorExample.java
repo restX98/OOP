@@ -22,5 +22,4 @@ public class IteratorExample {
 		for (int i = 0;  i < list.size(); i++) val = list.get(i); 
 		System.out.println("Get End");
     }
-
 }
