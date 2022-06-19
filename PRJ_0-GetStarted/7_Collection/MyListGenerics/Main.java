@@ -29,5 +29,20 @@ public class Main{
          */
         // Assegnando Object torniamo al caso della MyList
         MyListGenerics<Object> objectList = new MyListGenerics<Object>();
+
+        objectList.add(new Point(3, 5));
+        objectList.add(new Point(4, 5));
+        objectList.addLast(10);
+        objectList.addFirst(new String("String Examples"));
+
+        System.out.println(objectList.toString());
+
+        /* Nonostante una qualunque classe C sia derivata da Object data
+         * un'implementazione generica G, non è vero che G<C> sia derivata
+         * di G<Object>.
+         */
+        
+        //MyListGenerics<Object> objList = list; // Compile Error
+
     }
 }
