@@ -1,0 +1,3 @@
+Karate, Maestro Miyagi, 10, 50.00
+Box, Mike Tyson, 30, 100.00
+Ninjutsu, Maestro Kakashi, 3, 30.00
