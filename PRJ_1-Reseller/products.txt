@@ -1,0 +1,8 @@
+AB123| "IPhone X in buone condizioni, trattabile"| 400.00| false| Informatica
+BC314| "Monitor DELL 27'' come nuovo"| 350.25| false| Informatica
+NE592| "Poggia Pentole in legno"| 5.80| false| Cucina
+NE564| "Pentole anti-aderente"| 5.80| false| Cucina
+GB932| "Trapano che gira dal verso sbagliato"| 50.00| false| FaiDaTe
+BE368| "Trapano che gira dal verso giusto"| 150.00| true| FaiDaTe
+PE692| "Frigorifero Smart"| 150.00| false| Cucina
+PE692| "Frigorifero Smart"| 150.00| false| Informatica
